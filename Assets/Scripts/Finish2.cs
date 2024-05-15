@@ -17,7 +17,7 @@ public class Finish2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" && !levelCompleted && ItemCollector1.countch==6)
+        if (collision.gameObject.name == "Player" && !levelCompleted)
         {
             finishSound.Play();
             levelCompleted = true;
@@ -27,6 +27,6 @@ public class Finish2 : MonoBehaviour
 
     private void CompleteLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(3);
     }
 }

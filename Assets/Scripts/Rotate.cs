@@ -11,5 +11,5 @@ public class Rotate : MonoBehaviour
         transform.Rotate(0, 0, 360 * speed * Time.deltaTime);   
     }
 
-
+    ///
 }

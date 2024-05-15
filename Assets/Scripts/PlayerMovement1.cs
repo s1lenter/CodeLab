@@ -11,13 +11,15 @@ public class PlayerMovement1 : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
-    [SerializeField] private InputField inputSpeed;
+    [SerializeField] private InputField inputJumpForce;
+    [SerializeField] private InputField inputCanJump;
 
+    [SerializeField] private Text text;
     [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
-    private float moveSpeed;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] private float moveSpeed = 7f;
+    private float jumpForce = 0;
 
     private enum MovementState { idle, running, jumping, falling }
 
@@ -32,22 +34,32 @@ public class PlayerMovement1 : MonoBehaviour
 
     public void Update()
     {
-        if (inputSpeed == null)
-            moveSpeed = 0;
-        else if (int.TryParse(inputSpeed.text, out int result))
-            if (result > 40)
-                moveSpeed = 40;
+        if (inputCanJump.text != "" && inputCanJump.text != "if(Input.GetKeyDown(KeyCode.Space))" &&
+            inputCanJump.text.Length >= 35 && inputJumpForce.text != "")
+            text.text = "Ошибка в строке 4";
         else
-            float.TryParse(inputSpeed.text, out moveSpeed);
+            text.text = "";
+        if (!float.TryParse(inputJumpForce.text, out float value) ||
+            inputCanJump.text != "if(Input.GetKeyDown(KeyCode.Space))")
+            jumpForce = 0;
+        else if (int.TryParse(inputJumpForce.text, out int result))
+        {
+            if (result > 10)
+                jumpForce = 15;
+            else
+                float.TryParse(inputJumpForce.text, out jumpForce);
+            text.text = "";
+        }
 
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y); 
+        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        //if (Input.GetButtonDown("Jump") && IsGrounded())
-        //{
-        //    jumpSoundEffect.Play();
-        //    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        //}
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            if (jumpForce != 0)
+                jumpSoundEffect.Play();
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
 
         UpdateAnimationState();
     }

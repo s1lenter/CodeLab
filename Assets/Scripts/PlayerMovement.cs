@@ -26,13 +26,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        if (inputSpeed == null)
+        if (!float.TryParse(inputSpeed.text,out float value))
             moveSpeed = 0;
-        else if (int.TryParse(inputSpeed.text, out int result))
+        else if (float.TryParse(inputSpeed.text, out float result))
             if (result > 40)
                 moveSpeed = 40;
-        else
-            float.TryParse(inputSpeed.text, out moveSpeed);
+        else if (float.TryParse(inputSpeed.text, out float newResult))
+            moveSpeed = newResult;
 
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y); 

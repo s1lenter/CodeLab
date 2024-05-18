@@ -29,8 +29,8 @@ public class PlayerMovement : MonoBehaviour
         if (!float.TryParse(inputSpeed.text,out float value))
             moveSpeed = 0;
         else if (float.TryParse(inputSpeed.text, out float result))
-            if (result > 40)
-                moveSpeed = 40;
+            if (result > 30)
+                moveSpeed = 30;
         else if (float.TryParse(inputSpeed.text, out float newResult))
             moveSpeed = newResult;
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Paused : MonoBehaviour
 {
-    [SerializeField]
-    GameObject pause;
+    [SerializeField] GameObject pause;
+    private bool isPaused;
 
     private void Start()
     {
@@ -14,10 +14,16 @@ public class Paused : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && !isPaused)
         {
             pause.SetActive(true);
             Time.timeScale = 0;
+            isPaused = true;
+        }
+        else if(Input.GetKeyUp(KeyCode.Escape) && isPaused)
+        {
+            isPaused = false;
+            PauseOff();
         }
     }
 

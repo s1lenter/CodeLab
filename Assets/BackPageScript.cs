@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NextPageScript : MonoBehaviour
+public class BackPageScript : MonoBehaviour
 {
-    [SerializeField] Button nextPageButton;
+    [SerializeField] Button backPageButton;
     [SerializeField] private Image mainImage;
     [SerializeField] private Image[] images;
     private int currentIndex;
@@ -14,7 +14,7 @@ public class NextPageScript : MonoBehaviour
     {
         if (currentIndex < images.Length - 1)
         {
-            currentIndex++;
+            currentIndex--;
             mainImage.sprite = images[currentIndex].sprite;
         }
     }

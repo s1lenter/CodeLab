@@ -7,8 +7,16 @@ public class NameViewer : MonoBehaviour
 {
     [SerializeField] private InputField inputField;
     [SerializeField] private Text text;
+    [SerializeField] private PlayerLife playerLife;
     public void ChangeName()
     {
-        text.text = inputField.text;
+        
+        if (inputField.text == "ZVO")
+        {
+            text.text = "Zа наших!!!! ГОООООЛ";
+            playerLife.Die();
+        }
+        else
+            text.text = "Привет, " + inputField.text;
     }
 }

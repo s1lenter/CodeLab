@@ -701,7 +701,7 @@ MonoBehaviour:
     m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -37176,6 +37176,18 @@ PrefabInstance:
     - target: {fileID: 6742853737626945619, guid: d5f4782a4e9553f4da2277d64ae1a286, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742853737626945620, guid: d5f4782a4e9553f4da2277d64ae1a286, type: 3}
+      propertyPath: m_ContentType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742853737626945620, guid: d5f4782a4e9553f4da2277d64ae1a286, type: 3}
+      propertyPath: m_KeyboardType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742853737626945620, guid: d5f4782a4e9553f4da2277d64ae1a286, type: 3}
+      propertyPath: m_CharacterValidation
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6742853737626945620, guid: d5f4782a4e9553f4da2277d64ae1a286, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

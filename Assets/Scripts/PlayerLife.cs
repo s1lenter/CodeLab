@@ -25,7 +25,7 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         CountDie++;
         deathSoundEffect.Play();

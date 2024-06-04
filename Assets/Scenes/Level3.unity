@@ -47910,6 +47910,14 @@ PrefabInstance:
       propertyPath: mainImage
       value: 
       objectReference: {fileID: 899339962}
+    - target: {fileID: 63870581864320428, guid: 90bcb00faa7210243a75bd20ca691641, type: 3}
+      propertyPath: sprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 63870581864320428, guid: 90bcb00faa7210243a75bd20ca691641, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 986e276beb23259468790d688445ea7a, type: 3}
     - target: {fileID: 63870581864320430, guid: 90bcb00faa7210243a75bd20ca691641, type: 3}
       propertyPath: m_Name
       value: TheoryNavigation

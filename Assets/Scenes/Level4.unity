@@ -471,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37, y: 16.15, z: -10}
+  m_LocalPosition: {x: -48.1, y: 15.16592, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47672,6 +47672,62 @@ PrefabInstance:
     - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
       propertyPath: m_ContentType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1106150393}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1106150393}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CanMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnDidEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5053381498493345974, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5911415244337302766, guid: 89f0fce48f7852744b5112d2185f3597, type: 3}
       propertyPath: m_Pivot.x

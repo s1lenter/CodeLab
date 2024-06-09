@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cherry
   - Trap
+  - Box
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 3943929437
+    locked: 0
+  - name: Box
+    uniqueID: 212702687
     locked: 0

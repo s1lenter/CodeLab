@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float dirX = 0f;
     private float moveSpeed;
 
+    private bool changeText = false;
+
     private enum MovementState { idle, running, jumping, falling }
 
     private void Start()
@@ -27,22 +29,27 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        if (!float.TryParse(inputSpeed.text,out float value))
-            moveSpeed = 0;
-        else if (float.TryParse(inputSpeed.text, out float result))
-            if (result > 30)
-                moveSpeed = 30;
-        else if (float.TryParse(inputSpeed.text, out float newResult))
-            moveSpeed = newResult;
+        if (!changeText)
+        {
+            if (!float.TryParse(inputSpeed.text, out float value))
+                moveSpeed = 0;
+            else if (float.TryParse(inputSpeed.text, out float result))
+                if (result > 30)
+                    moveSpeed = 30;
+                else if (float.TryParse(inputSpeed.text, out float newResult))
+                    moveSpeed = newResult;
 
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y); 
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        UpdateAnimationState();
+            UpdateAnimationState();
+        }
     }
 
     public void Stop()
     {
+        changeText = true;
+        StopAnimation();
         dirX = 0;
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
     }
@@ -52,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         MovementState state = MovementState.idle;
         anim.SetInteger("state", (int)state);
     }
+
+    public void CanMove() => changeText = false;
 
     private void UpdateAnimationState()
     {
@@ -68,18 +77,13 @@ public class PlayerMovement : MonoBehaviour
             sprite.flipX = true;
         }
         else
-        {
             state = MovementState.idle;
-        }
 
         if (rb.velocity.y > .1f)
-        {
             state = MovementState.jumping;
-        }
+
         else if (rb.velocity.y < -.1f)
-        {
             state = MovementState.falling;
-        }
 
         anim.SetInteger("state", (int)state);
     }

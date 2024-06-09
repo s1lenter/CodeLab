@@ -20,6 +20,8 @@ public class PlayerMovement2 : MonoBehaviour
 
     private bool canCheckGround;
 
+    private bool changeText = false;
+
     private float dirX = 0f;
     [SerializeField] private float moveSpeed = 7f;
     private float jumpForce = 15;
@@ -46,70 +48,59 @@ public class PlayerMovement2 : MonoBehaviour
 
     public void Update()
     {
-        //if (inputCanJump.text != "" && inputCanJump.text != "if(Input.GetKeyDown(KeyCode.Space))" &&
-        //    inputCanJump.text.Length >= 35 && inputJumpForce.text != "")
-        //    text.text = "Ошибка в строке 4";
-        //else
-        //    text.text = "";
-        //if (!float.TryParse(inputJumpForce.text, out float value) ||
-        //    inputCanJump.text != "if(Input.GetKeyDown(KeyCode.Space))")
-        //    jumpForce = 0;
-        //else if (int.TryParse(inputJumpForce.text, out int result))
-        //{
-        //    if (result > 10)
-        //        jumpForce = 15;
-        //    else
-        //        float.TryParse(inputJumpForce.text, out jumpForce);
-        //    text.text = "";
-        //}
-
-        string[] lines = groundChecker.text.Split("\n");
-
-        if (lines.Length == 6)
+        if (!changeText)
         {
-            for (int i = 0; i < rightAnswer.Length; i++)
+            string[] lines = groundChecker.text.Split("\n");
+
+            if (lines.Length == 6)
             {
-                if (lines[i] == rightAnswer[i])
-                    canCheckGround = true;
-                else
-                    canCheckGround = false;
+                for (int i = 0; i < rightAnswer.Length; i++)
+                {
+                    if (lines[i] == rightAnswer[i])
+                        canCheckGround = true;
+                    else
+                        canCheckGround = false;
+                }
             }
+            else
+                canCheckGround = false;
+
+            if (canCheckGround)
+                Debug.Log("OK");
+
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+
+            if (canCheckGround)
+            {
+                if (Input.GetButtonDown("Jump") && IsGrounded())
+                {
+                    if (jumpForce != 0)
+                        jumpSoundEffect.Play();
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
+            }
+
+            else
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    if (jumpForce != 0)
+                        jumpSoundEffect.Play();
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                }
+            }
+
+
+            UpdateAnimationState();
         }
         else
-            canCheckGround = false;
-
-        if (canCheckGround)
-            Debug.Log("OK");
-
-        dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-
-        if (canCheckGround)
-        {
-            if (Input.GetButtonDown("Jump") && IsGrounded())
-            {
-                if (jumpForce != 0)
-                    jumpSoundEffect.Play();
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            }
-        }
-
-        else
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                if (jumpForce != 0)
-                    jumpSoundEffect.Play();
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            }
-        }
-            
-
-        UpdateAnimationState();
+            StopAnimation();
     }
 
     public void Stop()
     {
+        changeText = true;
         dirX = 0;
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
@@ -119,6 +110,11 @@ public class PlayerMovement2 : MonoBehaviour
                 jumpSoundEffect.Stop();
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             }
+    }
+
+    public void CanMove()
+    {
+        changeText = false;
     }
 
     public void StopAnimation()

@@ -491,6 +491,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 837723523}
+  shiftX: 5
+  shiftY: 0
 --- !u!1 &567127249
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +999,7 @@ MonoBehaviour:
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  finish: {fileID: 405904572}
   moveSpeed: 7
   jumpSoundEffect: {fileID: 1106150376}
 --- !u!1 &1202955673 stripped

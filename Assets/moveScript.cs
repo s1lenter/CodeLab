@@ -51,7 +51,7 @@ public class moveScript : MonoBehaviour
                 }
             }
             if (canMoveDown && transform.position.y > boxColumn.transform.position.y + 2)
-                transform.position = new Vector2(transform.position.x, transform.position.y - 0.005f);
+                transform.position = new Vector2(transform.position.x, transform.position.y - 0.05f);
             else
                 transform.position = new Vector2(transform.position.x, transform.position.y);
         }

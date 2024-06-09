@@ -18,6 +18,8 @@ public class PlayerMovement2 : MonoBehaviour
     [SerializeField] private Text text;
     [SerializeField] private LayerMask jumpableGround;
 
+    [SerializeField] private GameObject finish;
+
     private bool canCheckGround;
 
     private bool changeText = false;
@@ -44,6 +46,9 @@ public class PlayerMovement2 : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();   
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        finish.GetComponent<BoxCollider2D>().enabled = false;
+        finish.GetComponent<Renderer>().enabled = false;
     }
 
     public void Update()
@@ -73,12 +78,15 @@ public class PlayerMovement2 : MonoBehaviour
 
             if (canCheckGround)
             {
+                finish.GetComponent<BoxCollider2D>().enabled = true;
+                finish.GetComponent<Renderer>().enabled = true;
                 if (Input.GetButtonDown("Jump") && IsGrounded())
                 {
                     if (jumpForce != 0)
                         jumpSoundEffect.Play();
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 }
+
             }
 
             else

@@ -35,7 +35,7 @@ public class moveScript : MonoBehaviour
     {
         string[] lines = input.text.Split('\n');
 
-        if (lines[0] == rightAnswer[0])
+        if (lines[0] == rightAnswer[0] || lines[0] == "int[] blocksY = [10,20,30,40,50];")
         {
             coll.enabled = true;
             rb.WakeUp();
@@ -51,9 +51,16 @@ public class moveScript : MonoBehaviour
                 }
             }
             if (canMoveDown && transform.position.y > boxColumn.transform.position.y + 2)
+            {
+                box.tag = "Trap";
                 transform.position = new Vector2(transform.position.x, transform.position.y - 0.05f);
+            }
             else
+            {
+                box.tag = "Box";
                 transform.position = new Vector2(transform.position.x, transform.position.y);
+            }
+                
         }
         else
         {

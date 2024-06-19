@@ -15,7 +15,6 @@ public class PlayerMovement2 : MonoBehaviour
     private Animator anim;
     [SerializeField] private InputField groundChecker;
 
-    [SerializeField] private Text text;
     [SerializeField] private LayerMask jumpableGround;
 
     [SerializeField] private GameObject finish;
@@ -33,7 +32,7 @@ public class PlayerMovement2 : MonoBehaviour
         "{",
         "bool result;",
         "result = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);",
-        "return result",
+        "return result;",
         "}",
     };
 
@@ -69,9 +68,6 @@ public class PlayerMovement2 : MonoBehaviour
             }
             else
                 canCheckGround = false;
-
-            if (canCheckGround)
-                Debug.Log("OK");
 
             dirX = Input.GetAxisRaw("Horizontal");
             rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);

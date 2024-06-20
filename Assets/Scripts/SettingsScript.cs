@@ -7,6 +7,6 @@ public class SettingsScript : MonoBehaviour
 {
     public void OpenSettings()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(1);
     }
 }

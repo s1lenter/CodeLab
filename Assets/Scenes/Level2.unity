@@ -575,6 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498628215}
   - component: {fileID: 1498628214}
+  - component: {fileID: 1498628216}
   m_Layer: 0
   m_Name: BGmusic
   m_TagString: Untagged
@@ -693,6 +694,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498628216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498628213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4d95f6ccb2d8a48b0dbd95b102fe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1498628214}
 --- !u!1 &1504844331
 GameObject:
   m_ObjectHideFlags: 0
@@ -36908,6 +36922,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c266a4ead8db2c34dbe18ccfe1567c57, type: 3}
+--- !u!1 &4344625887143390524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8336785891358630209, guid: c266a4ead8db2c34dbe18ccfe1567c57, type: 3}
+  m_PrefabInstance: {fileID: 4344625887143390523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &4344625887143390525 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3236045157677841264, guid: c266a4ead8db2c34dbe18ccfe1567c57, type: 3}
+  m_PrefabInstance: {fileID: 4344625887143390523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4344625887143390526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4344625887143390524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c081514d02e019640a2d07a8f52337fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 4344625887143390525}
 --- !u!1001 &5635043613399578645
 PrefabInstance:
   m_ObjectHideFlags: 0

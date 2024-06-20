@@ -33,6 +33,13 @@ public class Paused : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void PauseOn()
+    {
+        pause.SetActive(true);
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
     public void Quit()
     {
         Application.Quit();

@@ -21,7 +21,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             cherries++;
             countch++;
-            cherriesText.text = "Cherries:" + cherries;
+            cherriesText.text = "Вишни:" + cherries;
             
         }    
     }

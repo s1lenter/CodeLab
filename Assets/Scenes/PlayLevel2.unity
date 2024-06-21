@@ -306,6 +306,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 797710779505348680, guid: a577e71214adb0b45a2be8f3677dba03, type: 3}
   m_PrefabInstance: {fileID: 82039268}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &129993186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129993174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c081514d02e019640a2d07a8f52337fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 129993178}
+  - {fileID: 129993188}
+  - {fileID: 129993187}
+--- !u!82 &129993187 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 797710780309172297, guid: a577e71214adb0b45a2be8f3677dba03, type: 3}
+  m_PrefabInstance: {fileID: 82039268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &129993188 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 797710780309172296, guid: a577e71214adb0b45a2be8f3677dba03, type: 3}
+  m_PrefabInstance: {fileID: 82039268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &167406809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9028647994040733198, guid: d2d903c04e9961c469eb3efc0dea1989, type: 3}
@@ -1649,6 +1675,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cherriesCount: 5
+--- !u!114 &1048453071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048453063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c081514d02e019640a2d07a8f52337fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSources:
+  - {fileID: 1048453072}
+--- !u!82 &1048453072 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3236045157677841264, guid: c266a4ead8db2c34dbe18ccfe1567c57, type: 3}
+  m_PrefabInstance: {fileID: 7129904359954840671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1070805805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1923,6 +1968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498628215}
   - component: {fileID: 1498628214}
+  - component: {fileID: 1498628216}
   m_Layer: 0
   m_Name: BGmusic
   m_TagString: Untagged
@@ -2041,6 +2087,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498628216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498628213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4d95f6ccb2d8a48b0dbd95b102fe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  src: {fileID: 1498628214}
 --- !u!4 &1499676616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1925864020583463629, guid: 59082d6d63293314798a2c682ac270ee, type: 3}

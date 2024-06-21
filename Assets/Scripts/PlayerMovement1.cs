@@ -75,6 +75,7 @@ public class PlayerMovement1 : MonoBehaviour
         changeText = true;
         dirX = 0;
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
+        StopAnimation();
 
         if (SceneManager.sceneCountInBuildSettings == 3)
             if (Input.GetButtonDown("Jump"))

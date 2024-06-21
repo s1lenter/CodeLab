@@ -271,6 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogText: {fileID: 1515572269}
+--- !u!1 &138060489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5635043613366358447, guid: 7cee83766a6724c47b088df9f920e9d3, type: 3}
+  m_PrefabInstance: {fileID: 5635043613399578645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &178987975
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,7 +372,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5635043613366358441, guid: 7cee83766a6724c47b088df9f920e9d3, type: 3}
   m_PrefabInstance: {fileID: 5635043613399578645}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 138060489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a1e9105ee20aae439b77304a51c035b, type: 3}
@@ -723,6 +728,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 797710779505348680, guid: a577e71214adb0b45a2be8f3677dba03, type: 3}
   m_PrefabInstance: {fileID: 797710778668168651}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &837723524 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 797710779465571943, guid: a577e71214adb0b45a2be8f3677dba03, type: 3}
+  m_PrefabInstance: {fileID: 797710778668168651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e57e9da8fe955b409e01f8c4ee314ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &861162076
 GameObject:
   m_ObjectHideFlags: 0
@@ -37716,6 +37732,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6667686750427952402, guid: 7cee83766a6724c47b088df9f920e9d3, type: 3}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 138060489}
+    - target: {fileID: 6667686750427952402, guid: 7cee83766a6724c47b088df9f920e9d3, type: 3}
       propertyPath: settings
       value: 
       objectReference: {fileID: 2018792407}
@@ -37834,7 +37854,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 837723524}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Stop
         m_Mode: 1

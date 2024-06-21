@@ -557,8 +557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 97.160324, y: -31.433609}
-  m_SizeDelta: {x: 173.3535, y: 27.079193}
+  m_AnchoredPosition: {x: 310, y: -44}
+  m_SizeDelta: {x: 590, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488406564
 MonoBehaviour:
@@ -582,18 +582,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a0c3958b9e5d80347b569432e8b1ae26, type: 3}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cherries: 0'
+  m_Text: "\u0412\u0438\u0448\u043D\u0438: 0"
 --- !u!222 &488406565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -757,6 +757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  shiftX: 5
+  shiftY: 0
 --- !u!1001 &623425342
 PrefabInstance:
   m_ObjectHideFlags: 0

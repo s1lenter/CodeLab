@@ -5,7 +5,7 @@ using UnityEngine;
 public class PausedSettings : MonoBehaviour
 {
     [SerializeField] GameObject settings;
-    private bool isSetting;
+    public static bool isSetting;
     private void Start()
     {
         settings.SetActive(false);
